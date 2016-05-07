@@ -138,9 +138,20 @@ module.exports =
 	#
 	#     http://www.nodemailer.com/docs/transports
 	#
-	# email:
-	#	fromAddress: ""
-	#	replyTo: ""
+	email:
+		fromAddress: process.env["SHARELATEX_MAIL_FROM"]
+		replyTo: process.env["SHARELATEX_MAIL_REPLYTO"]
+		transport: process.env["SHARELATEX_MAIL_TRANSPORT"]
+		parameters:
+			host: process.env["SHARELATEX_MAIL_HOST"]
+			port: process.env["SHARELATEX_MAIL_PORT"]
+			authMethod: process.env["SHARELATEX_MAIL_AUTH"]
+			auth: {
+				user: process.env["SHARELATEX_MAIL_AUTH_USER"]
+				pass: process.env["SHARELATEX_MAIL_AUTH_PASS"]
+				}
+			secure: process.env["SHARELATEX_MAIL_SECURE"]
+
 	#	transport: "SES"
 	#	parameters:
 	#		AWSAccessKeyID: ""
