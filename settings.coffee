@@ -139,18 +139,18 @@ module.exports =
 	#     http://www.nodemailer.com/docs/transports
 	#
 	email:
-		fromAddress: process.env["SHARELATEX_MAIL_FROM"]
-		replyTo: process.env["SHARELATEX_MAIL_REPLYTO"]
-		transport: process.env["SHARELATEX_MAIL_TRANSPORT"]
+		fromAddress: process.env["SHARELATEX_MAIL_FROM"] or ""
+		replyTo: process.env["SHARELATEX_MAIL_REPLYTO"] or ""
+		transport: process.env["SHARELATEX_MAIL_TRANSPORT"] or ""
 		parameters:
-			host: process.env["SHARELATEX_MAIL_HOST"]
-			port: process.env["SHARELATEX_MAIL_PORT"]
-			authMethod: process.env["SHARELATEX_MAIL_AUTH"]
+			host: process.env["SHARELATEX_MAIL_HOST"] or ""
+			port: process.env["SHARELATEX_MAIL_PORT"] or ""
+			authMethod: process.env["SHARELATEX_MAIL_AUTH"] or ""
 			auth: {
-				user: process.env["SHARELATEX_MAIL_AUTH_USER"]
-				pass: process.env["SHARELATEX_MAIL_AUTH_PASS"]
+				user: process.env["SHARELATEX_MAIL_AUTH_USER"] or ""
+				pass: process.env["SHARELATEX_MAIL_AUTH_PASS"] or ""
 				}
-			secure: process.env["SHARELATEX_MAIL_SECURE"]
+			secure: process.env["SHARELATEX_MAIL_SECURE"]?
 
 	#	transport: "SES"
 	#	parameters:
