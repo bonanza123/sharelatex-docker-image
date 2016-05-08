@@ -147,7 +147,7 @@ module.exports =
 			port: process.env["SHARELATEX_MAIL_PORT"] or ""
 			authMethod: process.env["SHARELATEX_MAIL_AUTH"] or ""
 			auth: {
-				user: process.env["SHARELATEX_MAIL_AUTH_USER"] or ""
+				user: process.env["SHARELATEX_MAIL_AUTH_USER"] or "",
 				pass: process.env["SHARELATEX_MAIL_AUTH_PASS"] or ""
 				}
 			secure: process.env["SHARELATEX_MAIL_SECURE"]?

@@ -44,6 +44,8 @@ mkdir /etc/service/track-changes-sharelatex
 mkdir /etc/service/web-sharelatex
 
 mkdir /etc/sharelatex
+chown -R root:root /etc/sharelatex
+chmod -R a=r,u=rw /etc/sharelatex
 
 # Install TexLive basic scheme
 wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
